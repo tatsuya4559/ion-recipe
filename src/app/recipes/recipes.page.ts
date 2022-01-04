@@ -13,7 +13,9 @@ export class RecipesPage implements OnInit {
   constructor(private recipesService: RecipesService) { }
 
   ngOnInit() {
-    // FIXME: subscribe recipes!
+  }
+
+  ionViewWillEnter() {
     this.recipes = this.recipesService.getAllRecipes();
   }
 
