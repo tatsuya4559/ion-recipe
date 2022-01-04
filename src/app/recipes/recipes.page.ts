@@ -13,6 +13,7 @@ export class RecipesPage implements OnInit {
   constructor(private recipesService: RecipesService) { }
 
   ngOnInit() {
+    // FIXME: subscribe recipes!
     this.recipes = this.recipesService.getAllRecipes();
   }
 
