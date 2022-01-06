@@ -7,6 +7,14 @@ const routes: Routes = [
   {
     path: '',
     component: PlacesPage
+  },
+  {
+    path: 'discover',
+    loadChildren: () => import('./discover/discover.module').then( m => m.DiscoverPageModule)
+  },
+  {
+    path: 'offers',
+    loadChildren: () => import('./offers/offers.module').then( m => m.OffersPageModule)
   }
 ];
 
