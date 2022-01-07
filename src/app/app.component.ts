@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { NavController } from '@ionic/angular';
 import { AuthService } from './auth.service';
 
 @Component({
@@ -10,11 +10,11 @@ import { AuthService } from './auth.service';
 export class AppComponent {
   constructor(
     private authService: AuthService,
-    private router: Router,
+    private navCtrl: NavController,
   ) {}
 
   onLogout() {
     this.authService.logout();
-    this.router.navigateByUrl('/auth');
+    this.navCtrl.navigateRoot('/auth');
   }
 }
