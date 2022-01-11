@@ -16,7 +16,7 @@ export class BookingsPage implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.bookingService.bookings$.subscribe(bookings => {
+    this.bookingService.resource$.subscribe(bookings => {
       this.loadedBookings = bookings;
     });
   }
